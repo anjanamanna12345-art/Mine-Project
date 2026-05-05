@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center hero-section shadow-lg">
+    <h1 class="display-4 fw-bolder mb-3"><i class="fas fa-fingerprint text-white opacity-75 me-3"></i>Welcome to Odia Asmita
+    </h1>
+    <p class="lead fw-normal text-white-75 mb-4">The ultimate Microservices Super App experience.</p>
+</div>
+
+<div class="row gx-4 gx-lg-5">
+    <!-- Kitchen Card -->
+    <div class="col-md-4 mb-5 hero-card">
+        <div class="card h-100 shadow-sm border-0 bg-white">
+            <div class="card-body text-center p-5">
+                <div class="service-icon"><i class="fas fa-utensils text-danger"></i></div>
+                <h2 class="card-title fw-bold">Handishala</h2>
+                <p class="card-text text-muted mb-4">Order your favorite delicious meals instantly from our kitchen
+                    service.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <a class="btn btn-danger btn-custom text-white shadow"
+                    href="{{ KITCHEN_URL }}/?token={{ request.session.jwt_token|default:'' }}">Explore Menu</a>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Card -->
+    <div class="col-md-4 mb-5 hero-card">
+        <div class="card h-100 shadow-sm border-0 bg-white">
+            <div class="card-body text-center p-5">
+                <div class="service-icon"><i class="fas fa-shopping-bag text-primary"></i></div>
+                <h2 class="card-title fw-bold">Bazzar</h2>
+                <p class="card-text text-muted mb-4">Shop the latest trends and products from our e-commerce portal.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <a class="btn btn-primary btn-custom text-white shadow"
+                    href="{{ SHOP_URL }}/?token={{ request.session.jwt_token|default:'' }}">Start Shopping</a>
+            </div>
+        </div>
+    </div>
+    <!-- Music Card -->
+    <div class="col-md-4 mb-5 hero-card">
+        <div class="card h-100 shadow-sm border-0 bg-white">
+            <div class="card-body text-center p-5">
+                <div class="service-icon"><i class="fas fa-music text-success"></i></div>
+                <h2 class="card-title fw-bold">Sanskriti</h2>
+                <p class="card-text text-muted mb-4">Stream the newest hits and create your own playlists on the go.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <a class="btn btn-success btn-custom text-white shadow"
+                    href="{{ MUSIC_URL }}/?token={{ request.session.jwt_token|default:'' }}">Listen Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Hero Splash Animation
+        gsap.from(".hero-section h1", {
+            y: -80,
+            opacity: 0,
+            duration: 1.5,
+            ease: "elastic.out(1, 0.5)"
+        });
+        
+        gsap.from(".hero-section p", {
+            y: 40,
+            opacity: 0,
+            duration: 1.2,
+            delay: 0.4,
+            ease: "back.out(1.5)"
+        });
+
+        // 3D Staggered Cards Entry
+        gsap.from(".hero-card", {
+            y: 120,
+            opacity: 0,
+            scale: 0.7,
+            rotationX: 35,
+            rotationY: 15,
+            transformPerspective: 1000,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "elastic.out(1, 0.75)",
+            delay: 0.6
+        });
+    });
+</script>
+{% endblock %}
+
+
+
+
