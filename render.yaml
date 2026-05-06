@@ -4,7 +4,7 @@ services:
     name: mine-gateway
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt && python mine_main/manage.py migrate"
+    buildCommand: "pip install -r requirements.txt && python mine_main/manage.py migrate && python create_superusers.py mine_main"
     startCommand: "cd mine_main && gunicorn mine_main.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
@@ -35,7 +35,7 @@ services:
     name: mine-kitchen
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt && python mine_kitchen/manage.py migrate"
+    buildCommand: "pip install -r requirements.txt && python mine_kitchen/manage.py migrate && python create_superusers.py mine_kitchen"
     startCommand: "cd mine_kitchen && gunicorn mine_kitchen.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
@@ -56,7 +56,7 @@ services:
     name: mine-shop
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt && python mine_shop/manage.py migrate"
+    buildCommand: "pip install -r requirements.txt && python mine_shop/manage.py migrate && python create_superusers.py mine_shop"
     startCommand: "cd mine_shop && gunicorn mine_shop.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
@@ -77,7 +77,7 @@ services:
     name: mine-music
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt && python mine_music/manage.py migrate"
+    buildCommand: "pip install -r requirements.txt && python mine_music/manage.py migrate && python create_superusers.py mine_music"
     startCommand: "cd mine_music && gunicorn mine_music.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
