@@ -7,9 +7,9 @@ django.setup()
 from kitchen.models import FoodItem
 
 updates = {
-    "Pakhala Bhata": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800",
-    "Dalma": "https://images.unsplash.com/photo-1548943487-a2e4b43b4850?w=800",
-    "Chhena Poda": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800"
+    "Pakhala Bhata": "https://img.youtube.com/vi/pdgXnhEDV9s/maxresdefault.jpg",
+    "Dalma": "https://img.youtube.com/vi/BaeOKMhYwLQ/maxresdefault.jpg",
+    "Chhena Poda": "https://img.youtube.com/vi/hV4VhLtofWQ/maxresdefault.jpg"
 }
 
 for name, url in updates.items():
@@ -17,4 +17,4 @@ for name, url in updates.items():
     for item in items:
         item.image_url = url
         item.save()
-print("Kitchen images updated successfully!")
+print("Kitchen images updated to requested ones successfully!")
