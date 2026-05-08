@@ -567,7 +567,7 @@
                             ? `<img src="${item.image_url}" class="search-img" alt="${item.name}">`
                             : `<div class="search-img"><i class="fas fa-image"></i></div>`;
 
-                        let priceOrGenre = item.price ? `$${parseFloat(item.price).toFixed(2)}` : (item.genre || '');
+                        let priceOrGenre = item.price ? `₹${parseFloat(item.price).toFixed(2)}` : (item.genre || '');
 
                         sectionHtml += `
                             <a href="${baseUrl}" class="search-result-item">

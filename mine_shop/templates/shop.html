@@ -13,11 +13,11 @@
             placeholder="Search products..." oninput="handleSearch()">
     </div>
     <div class="col-md-2 mb-2">
-        <input type="number" id="minPrice" class="form-control rounded-pill border-primary" placeholder="Min $..."
+        <input type="number" id="minPrice" class="form-control rounded-pill border-primary" placeholder="Min ₹..."
             oninput="handleSearch()" min="0" step="0.01">
     </div>
     <div class="col-md-2 mb-2">
-        <input type="number" id="maxPrice" class="form-control rounded-pill border-primary" placeholder="Max $..."
+        <input type="number" id="maxPrice" class="form-control rounded-pill border-primary" placeholder="Max ₹..."
             oninput="handleSearch()" min="0" step="0.01">
     </div>
 </div>
@@ -142,7 +142,7 @@
                                 <div class="card-body pt-1 px-3">
                                     <div class="mb-2">${stockBadge}</div>
                                     <h5 class="card-title fw-bold text-dark fs-5 mb-1 text-truncate">${item.name}</h5>
-                                    <h6 class="text-primary fw-bolder fs-5 mb-2">$${item.price}</h6>
+                                    <h6 class="text-primary fw-bolder fs-5 mb-2">₹${item.price}</h6>
                                     <p class="card-text text-muted small text-truncate">${item.description}</p>
                                 </div>
                             </a>

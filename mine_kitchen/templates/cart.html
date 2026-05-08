@@ -66,7 +66,7 @@
                     <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
                         <div>
                             <h6 class="mb-0 fw-bold">${title}</h6>
-                            <small class="text-muted d-block mb-2">Price: $${price}</small>
+                            <small class="text-muted d-block mb-2">Price: ₹${price}</small>
                             <div class="input-group input-group-sm mb-0" style="width: 120px;">
                                 <button class="btn btn-outline-danger" type="button" onclick="updateQuantity(${item.id}, ${item.quantity - 1})"><i class="fas fa-minus"></i></button>
                                 <input type="text" class="form-control text-center bg-white border-0" value="${item.quantity}" readonly>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <span class="fw-bold d-block mb-2">$${itemTotal.toFixed(2)}</span>
+                            <span class="fw-bold d-block mb-2">₹${itemTotal.toFixed(2)}</span>
                             <button class="btn btn-sm btn-link text-danger text-decoration-none p-0" onclick="removeItem(${item.id})">
                                 <i class="fas fa-trash-alt me-1"></i>Remove
                             </button>
@@ -85,7 +85,7 @@
 
             html += `</ul><div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
                         <h6 class="mb-0 fw-bold">Total</h6>
-                        <h5 class="mb-0 fw-bolder">$${total.toFixed(2)}</h5>
+                        <h5 class="mb-0 fw-bolder">₹${total.toFixed(2)}</h5>
                      </div>`;
 
             container.innerHTML = html;
