@@ -8,7 +8,8 @@ from kitchen.models import FoodItem
 
 updates = {
     "Pakhala Bhata": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Pakhala_01.jpg/960px-Pakhala_01.jpg",
-    "Chhena Poda": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bhubaneswar_Odia_Meetup_2013Jan29-23.JPG/960px-Bhubaneswar_Odia_Meetup_2013Jan29-23.JPG"
+    "Chhena Poda": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bhubaneswar_Odia_Meetup_2013Jan29-23.JPG/960px-Bhubaneswar_Odia_Meetup_2013Jan29-23.JPG",
+    "Biriyani": "https://images.unsplash.com/photo-1589302168068-964664d93cb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
 }
 
 for name, url in updates.items():
