@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4" id="shop-header">
-    <h2 class="text-primary fw-bolder"><i class="fas fa-shopping-bag me-2"></i>Bazzar Catalog</h2>
+    <h2 class="text-primary fw-bolder"><i class="fas fa-shopping-bag me-2"></i>Mine_Shop Catalog</h2>
     <span class="badge bg-primary rounded-pill px-3 py-2 fs-6">Microservice 2</span>
 </div>
 
@@ -160,7 +160,7 @@
                 `;
                 container.innerHTML += card;
             });
-            
+
             // GSAP Stagger effect for dynamically loaded product cards
             gsap.from("#products-container .col-md-3", {
                 y: 50,
@@ -171,7 +171,7 @@
                 ease: "back.out(1.2)",
                 clearProps: "all"
             });
-            
+
         } catch (error) {
             document.getElementById('products-container').innerHTML =
                 `<div class="alert alert-danger w-100">Failed to load products: ${error.message}</div>`;
